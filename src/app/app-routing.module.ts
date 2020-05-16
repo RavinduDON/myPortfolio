@@ -35,8 +35,8 @@ const routes: Routes = [
       {path: 'languages', component: LanguagesComponent},
       {path: 'projects', component: ProjectsComponent},
       {path: 'skills', component: SkillsComponent},
-      {path: 'technology', component: TechnologiesComponent},
-      {path: '', pathMatch: 'full', redirectTo: '/languages'},
+      {path: 'technologies', component: TechnologiesComponent},
+      {path: '', pathMatch: 'full', redirectTo: './languages'},
     ]
   },
   {
