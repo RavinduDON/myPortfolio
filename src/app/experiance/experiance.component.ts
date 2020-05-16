@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-experiance',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExperianceComponent implements OnInit {
 
-  constructor() { }
+  sub: any;
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.sub = this.activatedRoute.snapshot.paramMap.get('sub');
+    this.router.navigate(['languages'], {relativeTo: this.activatedRoute});
   }
+
+
 
 }

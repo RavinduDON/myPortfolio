@@ -27,13 +27,21 @@ const routes: Routes = [
   {
     path: 'experiance',
     component: ExperianceComponent,
+  },
+  {
+    path: 'experiance/:sub',
+    component: ExperianceComponent,
     children: [
       {path: 'languages', component: LanguagesComponent},
       {path: 'projects', component: ProjectsComponent},
       {path: 'skills', component: SkillsComponent},
       {path: 'technology', component: TechnologiesComponent},
-      {path: '', pathMatch: 'full', redirectTo: '/skills'},
+      {path: '', pathMatch: 'full', redirectTo: '/languages'},
     ]
+  },
+  {
+    path: 'skills',
+    component: SkillsComponent
   },
   {
     path: 'contact',
